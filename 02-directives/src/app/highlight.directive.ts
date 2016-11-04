@@ -1,16 +1,33 @@
-import { Directive, ElementRef, Renderer } from '@angular/core';
+import { Directive, HostListener, HostBinding } from '@angular/core';
+//import { Directive, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
-  selector: '[highlight]'
+    selector: '[highlight]'
 })
 export class HighlightDirective {
 
-  constructor(private _elementRef: ElementRef, private _renderer: Renderer) {
-    //Not recommended
-    //this._elementRef.nativeElement.style.backgroundColor = 'green';
+    @HostListener('mouseenter') mouseOver() {
+        this.backgroundColor = 'green';
+        //this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'green');
+    }
+    @HostListener('mouseleave') mouseLeave() {
+        this.backgroundColor = 'white';
+        //this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'white');
+    }
 
-    this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'blue');
+    @HostBinding('style.backgroundColor') get setColor() {
+        return this.backgroundColor;
+    }
 
-  }
+    private backgroundColor = 'white';
+    constructor() { }
+
+    // constructor(private _elementRef: ElementRef, private _renderer: Renderer) {
+    //   //Not recommended
+    //   //this._elementRef.nativeElement.style.backgroundColor = 'green';
+
+    //   this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'blue');
+
+    // }
 
 }
