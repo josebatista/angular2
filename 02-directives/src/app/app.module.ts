@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
+import { ListenerPassingDataDirective } from './listener-passing-data.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    ListenerPassingDataDirective
   ],
   imports: [
     BrowserModule,
