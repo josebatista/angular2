@@ -1,4 +1,4 @@
-import { Directive, HostListener, HostBinding } from '@angular/core';
+import { Directive, HostListener, HostBinding, Input, OnInit } from '@angular/core';
 //import { Directive, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
@@ -7,11 +7,13 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
 export class HighlightDirective {
 
     @HostListener('mouseenter') mouseOver() {
-        this.backgroundColor = 'green';
+        this.backgroundColor = this.highlightColor;
+        //this.backgroundColor = 'green';
         //this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'green');
     }
     @HostListener('mouseleave') mouseLeave() {
-        this.backgroundColor = 'white';
+        this.backgroundColor = this.defaultColor;
+        //this.backgroundColor = 'white';
         //this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'white');
     }
 
@@ -19,7 +21,11 @@ export class HighlightDirective {
         return this.backgroundColor;
     }
 
-    private backgroundColor = 'white';
+    @Input() defaultColor = 'white';
+    @Input('highlight') highlightColor = 'green';
+
+    private backgroundColor: string;
+    //private backgroundColor = 'white';
     constructor() { }
 
     // constructor(private _elementRef: ElementRef, private _renderer: Renderer) {
@@ -29,5 +35,8 @@ export class HighlightDirective {
     //   this._renderer.setElementStyle(this._elementRef.nativeElement, 'background-color', 'blue');
 
     // }
+    ngOnInit() {
+        this.backgroundColor = this.defaultColor;
+    }
 
 }
