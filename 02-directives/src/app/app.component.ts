@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   private switchProperty = true;
+  private items = [1, 2, 3, 4, 5];
 
   onSwitch() {
     this.switchProperty = !this.switchProperty;
