@@ -2,3 +2,4 @@ LEARNING ABOUT ANGULAR2
 
 SESSION7
  * Class 59
+ * Class 61
