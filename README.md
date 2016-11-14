@@ -6,3 +6,10 @@ SESSION7
  * Class 62
  * Class 64
  * Class 65
+SESSION8
+  Recipe Book
+    * Class 66
+    * Class 67
+    * Class 68
+    * Class 69
+    
