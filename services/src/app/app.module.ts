@@ -8,6 +8,7 @@ import { ServiceComponent } from './service/service.component';
 import { CmpAComponent } from './service/cmp-a.component';
 import { CmpBComponent } from './service/cmp-b.component';
 import { LogService } from './service/log.service';
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { LogService } from './service/log.service';
     FormsModule,
     HttpModule
   ],
-  providers: [LogService],
+  providers: [LogService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
