@@ -10,7 +10,7 @@ import { DataService } from './data.service';
     <input type="text" #input />
     <button (click)="onLog(input.value)">Log</button>
     <button (click)="onStore(input.value)">Store</button>
-    <button (click)="onSend()">Send</button>
+    <!--button (click)="onSend()">Send</button-->
   </div>
   <hr />
   <div>
@@ -33,8 +33,11 @@ export class CmpBComponent implements OnInit {
     constructor(private logService: LogService, private dataService: DataService) { }
 
     ngOnInit() {
+      this.dataService.pushedData.subscribe(
+        data => this.value = data
+      );
     }
-
+    
     onLog(value: string) {
       this.logService.writeToLog(value);
     }
