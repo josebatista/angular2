@@ -9,3 +9,4 @@ SESSION7
 SESSION8
   Recipe Book
     * Class 66
+    * Class 67
