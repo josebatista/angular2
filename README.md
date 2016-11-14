@@ -15,3 +15,4 @@ SESSION8
 SESSION9
   * Class 72
   * Class 73
+  * Class 74
