@@ -7,7 +7,7 @@
       <a [routerLink]="['']">Home</a> |
       <input type="text" #id (input)="0">
       <!-- <a [routerLink]="['user', id.value]" [preserveQueryParams]="true" routerLinkActive="active" >User</a> -->
-      <a [routerLink]="['user', id.value]" routerLinkActive="active" >User</a>
+      <a [routerLink]="['user', id.value == '' ? 1 : id.value]">User</a>
       <hr />
       <router-outlet></router-outlet>
     </div>
