@@ -33,3 +33,5 @@ SESSION10
   * Class 93
   * Class 94
   * Class 95
+  * Class 96
+  
