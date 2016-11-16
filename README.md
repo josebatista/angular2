@@ -29,7 +29,7 @@ SESSION9
   * Class 87
   * Class 89
   * Class 90
-SESSION10
+SESSION10 (Recipe-Book Project)
   * Class 93
   * Class 94
   * Class 95
@@ -38,3 +38,4 @@ SESSION10
   * Class 98
   * Class 99
   * Class 100
+SESSION11
