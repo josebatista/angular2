@@ -47,3 +47,4 @@ SESSION11
   * Class 109
   * Class 110
   * Class 111
+  * Class 112
