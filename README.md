@@ -40,3 +40,6 @@ SESSION10 (Recipe-Book Project)
   * Class 100
 SESSION11
   * Class 102
+  * Class 104
+  * Class 105
+  * Class 107
