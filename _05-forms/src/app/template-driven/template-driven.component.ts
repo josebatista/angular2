@@ -24,7 +24,7 @@ export class TemplateDrivenComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    //console.log(form);
+    // console.log(form);
     console.log(this.user);
   }
 
