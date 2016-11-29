@@ -20,4 +20,8 @@ export class DataDrivenComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log(this.myForm);
+  }
+
 }
