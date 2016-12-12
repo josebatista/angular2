@@ -1,17 +1,18 @@
 LEARNING ABOUT ANGULAR2
 
 SESSION7
- * Class 59
- * Class 61
- * Class 62
- * Class 64
- * Class 65
-SESSION8
-  Recipe Book
-    * Class 66
-    * Class 67
-    * Class 68
-    * Class 69
+  * Class 59
+  * Class 61
+  * Class 62
+  * Class 64
+  * Class 65
+
+SESSION8 (Recipe Book Project)
+  * Class 66
+  * Class 67
+  * Class 68
+  * Class 69
+
 SESSION9
   * Class 72
   * Class 73
@@ -29,6 +30,7 @@ SESSION9
   * Class 87
   * Class 89
   * Class 90
+
 SESSION10 (Recipe-Book Project)
   * Class 93
   * Class 94
@@ -38,6 +40,7 @@ SESSION10 (Recipe-Book Project)
   * Class 98
   * Class 99
   * Class 100
+
 SESSION11
   * Class 102
   * Class 104
@@ -55,3 +58,4 @@ SESSION11
   * Class 118
   * Class 119
   * Class 121
+  * Class 122
