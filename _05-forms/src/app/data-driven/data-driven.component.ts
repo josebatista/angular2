@@ -9,6 +9,8 @@ export class DataDrivenComponent implements OnInit {
 
   myForm: FormGroup;
 
+  genders = ['male', 'female'];
+
   constructor() {
     this.myForm = new FormGroup({
       'userData': new FormGroup({
@@ -19,6 +21,7 @@ export class DataDrivenComponent implements OnInit {
         ])
       }),
       'password': new FormControl('', Validators.required),
+      'gender' : new FormControl('male')
     });
   }
 

@@ -18,9 +18,8 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" formControlName="password">
     </div>
-    <div class="radio">
-        <label>
-        </label>
+    <div class="form-group" *ngFor="let g of genders" >
+        <input type="radio" formControlName="gender" [value]="g" > {{ g }}
     </div>
     <div>
         <h3>Hobbies</h3>
