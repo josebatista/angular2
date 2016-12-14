@@ -44,6 +44,14 @@ export class DataDrivenComponent implements OnInit {
       ])
     });
 
+    this.myForm.valueChanges.subscribe(
+      (data: any) => console.log(data)
+    );
+
+    this.myForm.statusChanges.subscribe(
+      (data: any) => console.log(data)
+    );
+
   }
 
   ngOnInit() {
@@ -57,9 +65,9 @@ export class DataDrivenComponent implements OnInit {
     console.log(this.myForm);
   }
 
-  exampleValidator(control: FormControl): {[s: string]: boolean} {
-    if(control.value === 'Example') {
-      return {example: true};
+  exampleValidator(control: FormControl): { [s: string]: boolean } {
+    if (control.value === 'Example') {
+      return { example: true };
     }
     return null;
   }
@@ -68,8 +76,8 @@ export class DataDrivenComponent implements OnInit {
     const promise = new Promise<any>(
       (resolve, reject) => {
         setTimeout(() => {
-          if(control.value === 'Example') {
-            resolve({'invalid': true});
+          if (control.value === 'Example') {
+            resolve({ 'invalid': true });
           } else {
             resolve(null);
           }
