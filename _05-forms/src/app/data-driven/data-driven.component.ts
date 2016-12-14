@@ -29,7 +29,7 @@ export class DataDrivenComponent implements OnInit {
 
     this.myForm = formBuilder.group({
       'userData': formBuilder.group({
-        'username': ['Testando', Validators.required],
+        'username': ['Testando', [Validators.required, this.exampleValidator]],
         'email': ['', [
           Validators.required,
           Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
@@ -53,6 +53,13 @@ export class DataDrivenComponent implements OnInit {
 
   onSubmit() {
     console.log(this.myForm);
+  }
+
+  exampleValidator(control: FormControl): {[s: string]: boolean} {
+    if(control.value === 'Example') {
+      return {example: true};
+    }
+    return null;
   }
 
 }
