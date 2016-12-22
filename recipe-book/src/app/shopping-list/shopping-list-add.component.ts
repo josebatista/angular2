@@ -14,18 +14,19 @@ export class ShoppingListAddComponent implements OnChanges {
 
   constructor(private sls: ShoppingListService) { }
 
- ngOnChanges(changes) {
-   if(changes.item.currentValue === null) {
-     this.isAdd = true;
-   } else {
-     this.isAdd = false;
-   }
- }
+  ngOnChanges(changes) {
+    if (changes.item.currentValue === null) {
+      this.isAdd = true;
+      this.item = { name: null, amount: null };
+    } else {
+      this.isAdd = false;
+    }
+  }
 
   onSubmit(ingredient: Ingredient) {
-    if(!this.isAdd) {
+    if (!this.isAdd) {
       //edit
-    } {
+    } else {
       this.item = new Ingredient(ingredient.name, ingredient.amount);
       this.sls.addItem(this.item);
     }
