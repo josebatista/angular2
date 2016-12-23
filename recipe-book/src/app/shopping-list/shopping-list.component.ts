@@ -9,12 +9,21 @@ import { Ingredient } from '../shared/ingredient'
 })
 export class ShoppingListComponent implements OnInit {
 
-  public items: Ingredient[] = [];
+  selectedItem: Ingredient = null;
+  items: Ingredient[] = [];
 
   constructor(private sls: ShoppingListService) { }
 
   ngOnInit() {
     this.items = this.sls.getItem();
+  }
+
+  onSelectItem(item: Ingredient) {
+    this.selectedItem = item;
+  }
+
+  onCleared() {
+    this.selectedItem = null;
   }
 
 }
