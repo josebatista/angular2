@@ -9,4 +9,9 @@
   <p>{{myValue | slice:5}}</p>
   <p>{{myValue | slice:3:7}}</p>
   <p>{{myValue | slice:3:7 | uppercase}}</p>
+  <hr>
+  <h2>Custom Pipe</h2>
+  <input type="text" #input (keyup)="0">
+  <p>{{input.value}}</p>
+  <p>{{input.value | double}}</p>
 </div>
