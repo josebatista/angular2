@@ -10,6 +10,7 @@ import { HttpService } from './http.service';
 export class AppComponent implements OnInit {
 
   items: any[] = [];
+  asyncString = this.httpService.getData();
 
   constructor(private httpService: HttpService) { }
 
