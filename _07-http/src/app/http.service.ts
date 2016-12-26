@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
-import 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
@@ -19,12 +19,20 @@ export class HttpService {
     headers.append('Content-Type', 'application/json');
     return this.http.post('https://angular2-course-b818b.firebaseio.com/data.json', body, {
       headers: headers
-    }).map((data: Response) => data.json());
+    }).map((data: Response) => data.json())
+      .catch(this.handleError);
   }
 
   getOwnData() {
     return this.http.get('https://angular2-course-b818b.firebaseio.com/data.json').map(
       (response: Response) => response.json()
     );
+  }
+
+  private handleError(error: any) {
+    console.log('AQUI');
+    console.log(error);
+    return Observable.throw(error.json());
+
   }
 }
