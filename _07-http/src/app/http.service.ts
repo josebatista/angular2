@@ -21,4 +21,10 @@ export class HttpService {
       headers: headers
     }).map((data: Response) => data.json());
   }
+
+  getOwnData() {
+    return this.http.get('https://angular2-course-b818b.firebaseio.com/data.json').map(
+      (response: Response) => response.json()
+    );
+  }
 }
