@@ -14,6 +14,7 @@ export class PipesComponent implements OnInit {
 
   myValue = 'lowercase';
   myDate = new Date(2016, 5,24);
+  values = ['Milk', 'Bread', 'Beans'];
 
   constructor() { }
 

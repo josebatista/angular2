@@ -14,4 +14,9 @@
   <input type="text" #input (keyup)="0">
   <p>{{input.value}}</p>
   <p>{{input.value | double}}</p>
+  <ul>
+    <li *ngFor="let item of values | filter:'ea'">
+      {{item}}
+    </li>
+  </ul>
 </div>

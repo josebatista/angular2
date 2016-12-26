@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { DoublePipe } from './pipes/double.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PipesComponent,
-    DoublePipe
+    DoublePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
