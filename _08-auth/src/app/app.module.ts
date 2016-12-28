@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +27,7 @@ import { AuthService } from './shared/auth.service';
     ReactiveFormsModule,
     routing
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
