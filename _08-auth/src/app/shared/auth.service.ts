@@ -17,6 +17,10 @@ export class AuthService {
             });
     }
 
+    logout(): void {
+        firebase.auth().signOut();
+    }
+
     isAuthenticated(): boolean {
         var user = firebase.auth().currentUser;
 
