@@ -126,3 +126,5 @@ SESSION18 (Optimizing Recipe-Book Project)
 
 SESSION19
   * Class 201
+  * Class 202
+  * Class 203
