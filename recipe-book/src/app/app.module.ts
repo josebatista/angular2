@@ -7,9 +7,8 @@ import { HeaderComponent } from './header.component';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { DropdownDirective } from './dropdown.directive';
-import { routing } from './app.routing';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { HomeComponent } from './home.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { HomeComponent } from './home.component';
   imports: [
     BrowserModule,
     HttpModule,
-    routing,
-    ShoppingListModule
+    routing
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
