@@ -115,3 +115,11 @@ SESSION17
   * Class 182
   * Class 183
   * Class 185
+
+SESSION18 (Optimizing Recipe-Book Project)
+  * Class 188
+  * Class 189
+  * Class 191
+  * Class 192
+  * Class 193
+  * Class 194
