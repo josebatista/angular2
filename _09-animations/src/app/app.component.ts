@@ -31,7 +31,15 @@ import { Component, trigger, state, style, transition, animate } from '@angular/
       })),
       transition('normal => highlighted', animate(300)),
       transition('highlighted => normal', animate(800)),
-      transition('shrunken <=> *', animate(500))
+      transition('shrunken <=> *', [
+        style({
+          'background-color': 'orange'
+        }),
+        animate(1000, style({
+          borderRadius: '50px'
+        })),
+        animate(500)
+      ])
     ])
   ],
   styleUrls: ['./app.component.css']
